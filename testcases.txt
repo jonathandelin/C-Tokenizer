@@ -1,0 +1,205 @@
+TEST CASES:
+
+Input 1:
+||<<= |= <<<>>> sizeof+=sizeof
+
+Expected Output:
+logical OR: "||"
+shift left equals: "<<="
+bitwise OR equals: "|="
+shift left: "<<"
+less than test: "<"
+shift right: ">>"
+greater than test: ">"
+sizeof: "sizeof"
+plus equals: "+="
+sizeof: "sizeof"
+
+Input 2: 
+sizeofabc sizeof123 123sizeofabc 123sizeof123
+
+Expected Output:
+word: "sizeofabc"
+word: "sizeof123"
+decimal integer: "123"
+word: "sizeofabc"
+decimal integer: "123"
+word: "sizeof123"
+
+Input 3:
++=?::sizeof  \t<<<<=>>> \n\v=>>=<//=/=/|| sizeof  |=+++-++---^^=~~,,,()[].->!==~=^=|=&=&&=%=/===!===<<=<=<><=>=<<<*&-*<<=>>=
+
+Expected Output:
+plus equals: "+="
+conditional true: "?"
+conditional false: ":"
+conditional false: ":"
+sizeof: "sizeof"
+shift left: "<<"
+shift left equals: "<<="
+shift right: ">>"
+greater than test: ">"
+assignment: "="
+shift right equals: ">>="
+less than test: "<"
+division: "/"
+divide equals: "/="
+divide equals: "/="
+division: "/"
+logical OR: "||"
+sizeof: "sizeof"
+bitwise OR equals: "|="
+increment: "++"
+addition: "+"
+minus/subtract operator: "-"
+increment: "++"
+decrement: "--"
+minus/subtract operator: "-"
+bitwise XOR: "^"
+bitwise XOR equals: "^="
+ls complement: "~"
+ls complement: "~"
+comma: ","
+comma: ","
+comma: ","
+left parenthesis: "("
+right parenthesis: ")"
+left bracket : "["
+right bracket: "]"
+structure member: "."
+structure pointer: "->"
+inequality test: "!="
+assignment: "="
+ls complement: "~"
+assignment: "="
+bitwise XOR equals: "^="
+bitwise OR equals: "|="
+bitwise AND equals: "&="
+logical AND: "&&"
+assignment: "="
+mod equals: "%="
+divide equals: "/="
+equality test: "=="
+inequality test: "!="
+equality test: "=="
+shift left equals: "<<="
+less than or equal test: "<="
+less than test: "<"
+greater than test: ">"
+less than or equal test: "<="
+greater than or equal test: ">="
+shift left: "<<"
+less than test: "<"
+multiply/dereference operator: "*"
+AND/address operator: "&"
+minus/subtract operator: "-"
+multiply/dereference operator: "*"
+shift left equals: "<<="
+shift right equals: ">>="
+
+
+Input 4: NOTE: please encase this input in single quotes instead of double
+
+072.11 sizeof 072 +++-<<<!-!=sizeof>><<=>>= 077 0000001223.4
+Expected Output:
+floating point: "072.11"
+sizeof: "sizeof"
+octal integer: "072"
+increment: "++"
+addition: "+"
+minus/subtract operator: "-"
+shift left: "<<"
+less than test: "<"
+negate: "!"
+minus/subtract operator: "-"
+inequality test: "!="
+sizeof: "sizeof"
+shift right: ">>"
+shift left equals: "<<="
+shift right equals: ">>="
+octal integer: "077"
+floating point: "0000001223.4"
+
+Input 5: 
+
+972 0x972 A8 0XA8 XA8 0972 072
+Expected Output:
+decimal integer: "972"
+hexadecimal integer: "0x972"
+word: "A8"
+hexadecimal integer: "0XA8"
+word: "XA8"
+decimal integer: "0972"
+octal integer: "072"
+
+Input 6:
+[][asdf 009123]    
+Expected Output:
+left bracket : "["
+right bracket: "]"
+left bracket : "["
+word: "asdf"
+decimal integer: "009123"
+right bracket: "]"
+
+Input 7:
+!=<<-=== \f   =1223===---    \t\t\t \n \v\r 00.00129994 
+Expected Output:
+inequality test: "!="
+shift left: "<<"
+minus equals: "-="
+equality test: "=="
+assignment: "="
+decimal integer: "1223"
+equality test: "=="
+assignment: "="
+decrement: "--"
+minus/subtract operator: "-"
+floating point: "00.00129994"
+
+
+Input 8: 
+972 0x972 A8 0XA8 XA8 00972 072 ./sizeofasdf
+Expected Output:
+decimal integer: "972"
+hexadecimal integer: "0x972"
+word: "A8"
+hexadecimal integer: "0XA8"
+word: "XA8"
+decimal integer: "00972"
+octal integer: "072"
+structure member: "."
+division: "/"
+word: "sizeofasdf"
+
+
+Input 9:
+sizeofgibberishasdasfaasizeof sizeof sizeoflkdfn  <=<<=>>=--sizeof-------
+Expected Output:
+word: "sizeofgibberishasdasfaasizeof"
+sizeof: "sizeof"
+word: "sizeoflkdfn"
+less than or equal test: "<="
+shift left equals: "<<="
+shift right equals: ">>="
+decrement: "--"
+sizeof: "sizeof"
+decrement: "--"
+decrement: "--"
+decrement: "--"
+minus/subtract operator: "-"
+
+
+Input 10:
+1.4e-10 1.4e10 1.4 3.14e102e1023 3.14e-102e-101313
+Expected Output:
+floating point: "1.4e-10"
+floating point: "1.4e10"
+floating point: "1.4"
+floating point: "3.14e102"
+word: "e1023"
+floating point: "3.14e-102"
+word: "e"
+minus/subtract operator: "-"
+decimal integer: "101313"
+
